@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"></link>
+    <title>Rich Mans Reddit</title>
+</head>
+<body ng-app="redditMod" ng-controller="redditController">
+  <center>
+    <div class="head">
+      <h1>Rich Man Reddit</h1>
+        <p>Type and click the button to search reddit</p>
+        <input type="text" placeholder="search" ng-model="input"></input>
+        <button type="button" name="button" ng-click="clicker(input)">Submit</button>
+    </div>
+
+    <div class="container">
+        <reddit-feed ng-repeat="feed in feeds"><reddit-feed>
+    </div>
+  </center>
+
+    <!-- <script src=""></script> -->
+    <script src="lib/angular.min.js"></script>
+    <!-- <script src="lib/angular-route.min.js"></script> -->
+    <script src="script.js"></script>
+    <script src="reddit-controller.js"></script>
+  </body>
+</html>
